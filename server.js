@@ -1,12 +1,8 @@
 import {app} from "./app.js"
-import dotenv from "dotenv"
+
 import {dbconnect} from "./config/database.js"
 import cloudinary from "cloudinary"
 
-
-dotenv.config({
-    path:"./config/config.env"
-})
 
 dbconnect();
 
@@ -17,8 +13,6 @@ cloudinary.v2.config({
     api_key:process.env.API_KEY,
     api_secret:process.env.API_SECRET
 })
-
-
 
 
 
